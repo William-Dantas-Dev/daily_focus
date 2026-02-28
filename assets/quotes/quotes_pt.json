@@ -1,0 +1,372 @@
+{
+    "version": 1,
+    "updated_at": "2026-02-28",
+    "quotes": [
+        {
+            "text": "A disciplina vence a motivação.",
+            "author": "Anônimo",
+            "category": "DISCIPLINA",
+            "source": null
+        },
+        {
+            "text": "Faça o que precisa ser feito, mesmo quando não quiser.",
+            "author": "Anônimo",
+            "category": "DISCIPLINA",
+            "source": null
+        },
+        {
+            "text": "Pequenas ações repetidas criam grandes resultados.",
+            "author": "Anônimo",
+            "category": "CONSTÂNCIA",
+            "source": null
+        },
+        {
+            "text": "Consistência supera intensidade.",
+            "author": "Anônimo",
+            "category": "CONSTÂNCIA",
+            "source": null
+        },
+        {
+            "text": "Comece antes de estar pronto.",
+            "author": "Steven Pressfield",
+            "category": "AÇÃO",
+            "source": null
+        },
+        {
+            "text": "Feito é melhor que perfeito.",
+            "author": "Sheryl Sandberg",
+            "category": "AÇÃO",
+            "source": null
+        },
+        {
+            "text": "O desconforto é o preço da evolução.",
+            "author": "Anônimo",
+            "category": "CRESCIMENTO",
+            "source": null
+        },
+        {
+            "text": "Sem disciplina, não há liberdade.",
+            "author": "Jocko Willink",
+            "category": "DISCIPLINA",
+            "source": null
+        },
+        {
+            "text": "Você não sobe ao nível dos seus objetivos, cai ao nível dos seus sistemas.",
+            "author": "James Clear",
+            "category": "SISTEMAS",
+            "source": null
+        },
+        {
+            "text": "A clareza precede a execução.",
+            "author": "Anônimo",
+            "category": "FOCO",
+            "source": null
+        },
+        {
+            "text": "Onde vai sua atenção, vai sua energia.",
+            "author": "Anônimo",
+            "category": "FOCO",
+            "source": null
+        },
+        {
+            "text": "Decisão elimina dúvida.",
+            "author": "Anônimo",
+            "category": "MENTALIDADE",
+            "source": null
+        },
+        {
+            "text": "Motivação começa você. Hábito mantém você.",
+            "author": "Anônimo",
+            "category": "HÁBITO",
+            "source": null
+        },
+        {
+            "text": "Ação gera confiança.",
+            "author": "Anônimo",
+            "category": "AÇÃO",
+            "source": null
+        },
+        {
+            "text": "Você se torna o que repete.",
+            "author": "Anônimo",
+            "category": "IDENTIDADE",
+            "source": null
+        },
+        {
+            "text": "Grandes resultados nascem de rotinas simples.",
+            "author": "Anônimo",
+            "category": "ROTINA",
+            "source": null
+        },
+        {
+            "text": "Pare de negociar com suas metas.",
+            "author": "Anônimo",
+            "category": "DISCIPLINA",
+            "source": null
+        },
+        {
+            "text": "Foque no processo, não no aplauso.",
+            "author": "Anônimo",
+            "category": "FOCO",
+            "source": null
+        },
+        {
+            "text": "A excelência é construída no silêncio.",
+            "author": "Anônimo",
+            "category": "DISCIPLINA",
+            "source": null
+        },
+        {
+            "text": "Seu futuro depende do que você faz hoje.",
+            "author": "Mahatma Gandhi",
+            "category": "AÇÃO",
+            "source": null
+        },
+        {
+            "text": "Energia segue intenção.",
+            "author": "Anônimo",
+            "category": "MENTALIDADE",
+            "source": null
+        },
+        {
+            "text": "O progresso diário é a verdadeira vitória.",
+            "author": "Anônimo",
+            "category": "CONSTÂNCIA",
+            "source": null
+        },
+        {
+            "text": "Simplifique. Execute. Repita.",
+            "author": "Anônimo",
+            "category": "PRODUTIVIDADE",
+            "source": null
+        },
+        {
+            "text": "A prática constante supera o talento ocasional.",
+            "author": "Anônimo",
+            "category": "CONSTÂNCIA",
+            "source": null
+        },
+        {
+            "text": "Você controla o esforço. Foque nisso.",
+            "author": "Anônimo",
+            "category": "MENTALIDADE",
+            "source": null
+        },
+        {
+            "text": "Construa sistemas que sustentem seus objetivos.",
+            "author": "Anônimo",
+            "category": "SISTEMAS",
+            "source": null
+        },
+        {
+            "text": "Coragem é agir apesar do medo.",
+            "author": "Anônimo",
+            "category": "CORAGEM",
+            "source": null
+        },
+        {
+            "text": "Não espere motivação. Crie disciplina.",
+            "author": "Anônimo",
+            "category": "DISCIPLINA",
+            "source": null
+        },
+        {
+            "text": "Uma decisão firme economiza mil distrações.",
+            "author": "Anônimo",
+            "category": "FOCO",
+            "source": null
+        },
+        {
+            "text": "Rotina é liberdade disfarçada.",
+            "author": "Anônimo",
+            "category": "ROTINA",
+            "source": null
+        },
+        {
+            "text": "Seu padrão determina seu resultado.",
+            "author": "Anônimo",
+            "category": "PADRÃO",
+            "source": null
+        },
+        {
+            "text": "O básico bem feito funciona.",
+            "author": "Anônimo",
+            "category": "DISCIPLINA",
+            "source": null
+        },
+        {
+            "text": "Menos intenção. Mais execução.",
+            "author": "Anônimo",
+            "category": "AÇÃO",
+            "source": null
+        },
+        {
+            "text": "A mente lidera, o corpo segue.",
+            "author": "Anônimo",
+            "category": "MENTALIDADE",
+            "source": null
+        },
+        {
+            "text": "Compromisso é fazer mesmo quando ninguém vê.",
+            "author": "Anônimo",
+            "category": "DISCIPLINA",
+            "source": null
+        },
+        {
+            "text": "Seu foco define seu crescimento.",
+            "author": "Anônimo",
+            "category": "FOCO",
+            "source": null
+        },
+        {
+            "text": "Persistência constrói confiança.",
+            "author": "Anônimo",
+            "category": "CONSTÂNCIA",
+            "source": null
+        },
+        {
+            "text": "Controle o que você pode controlar.",
+            "author": "Anônimo",
+            "category": "MENTALIDADE",
+            "source": null
+        },
+        {
+            "text": "Progresso silencioso ainda é progresso.",
+            "author": "Anônimo",
+            "category": "CRESCIMENTO",
+            "source": null
+        },
+        {
+            "text": "Disciplina hoje, orgulho amanhã.",
+            "author": "Anônimo",
+            "category": "DISCIPLINA",
+            "source": null
+        },
+        {
+            "text": "Intensidade passa. Consistência fica.",
+            "author": "Anônimo",
+            "category": "CONSTÂNCIA",
+            "source": null
+        },
+        {
+            "text": "A clareza reduz ansiedade.",
+            "author": "Anônimo",
+            "category": "FOCO",
+            "source": null
+        },
+        {
+            "text": "Construa hábitos antes de buscar resultados.",
+            "author": "Anônimo",
+            "category": "HÁBITO",
+            "source": null
+        },
+        {
+            "text": "O desconforto é temporário. O crescimento é permanente.",
+            "author": "Anônimo",
+            "category": "CRESCIMENTO",
+            "source": null
+        },
+        {
+            "text": "Sua rotina molda sua identidade.",
+            "author": "Anônimo",
+            "category": "IDENTIDADE",
+            "source": null
+        },
+        {
+            "text": "Resultados são consequência de padrões.",
+            "author": "Anônimo",
+            "category": "PADRÃO",
+            "source": null
+        },
+        {
+            "text": "O sucesso é repetição intencional.",
+            "author": "Anônimo",
+            "category": "CONSTÂNCIA",
+            "source": null
+        },
+        {
+            "text": "Você não precisa estar motivado, precisa estar comprometido.",
+            "author": "Anônimo",
+            "category": "DISCIPLINA",
+            "source": null
+        },
+        {
+            "text": "Ação imperfeita vence planejamento eterno.",
+            "author": "Anônimo",
+            "category": "AÇÃO",
+            "source": null
+        },
+        {
+            "text": "Construa hoje o que o futuro agradecerá.",
+            "author": "Anônimo",
+            "category": "VISÃO",
+            "source": null
+        },
+        {
+            "text": "Trabalho duro é inútil para aqueles que não acreditam em si mesmos.",
+            "author": "Naruto Uzumaki",
+            "category": "DISCIPLINA",
+            "source": "Naruto"
+        },
+        {
+            "text": "Se você não gosta do seu destino, não aceite. Tenha coragem para mudá-lo.",
+            "author": "Naruto Uzumaki",
+            "category": "CORAGEM",
+            "source": "Naruto"
+        },
+        {
+            "text": "Quando você desiste, seus sonhos e tudo o mais desaparecem.",
+            "author": "Naruto Uzumaki",
+            "category": "PERSISTÊNCIA",
+            "source": "Naruto"
+        },
+        {
+            "text": "Se você não lutar, não pode vencer.",
+            "author": "Eren Yeager",
+            "category": "AÇÃO",
+            "source": "Attack on Titan"
+        },
+        {
+            "text": "A única coisa que nos permite viver é a vontade de lutar.",
+            "author": "Mikasa Ackerman",
+            "category": "CORAGEM",
+            "source": "Attack on Titan"
+        },
+        {
+            "text": "Se você não arriscar sua vida, não pode criar um futuro.",
+            "author": "Monkey D. Luffy",
+            "category": "CORAGEM",
+            "source": "One Piece"
+        },
+        {
+            "text": "O poder não determina quem está certo. Determina quem é mais forte.",
+            "author": "Trafalgar Law",
+            "category": "MENTALIDADE",
+            "source": "One Piece"
+        },
+        {
+            "text": "Não importa o quanto você seja talentoso, esforço supera talento.",
+            "author": "L",
+            "category": "DISCIPLINA",
+            "source": "Death Note"
+        },
+        {
+            "text": "Não há justiça perfeita neste mundo.",
+            "author": "Light Yagami",
+            "category": "MENTALIDADE",
+            "source": "Death Note"
+        },
+        {
+            "text": "Você pode se tornar um herói.",
+            "author": "All Might",
+            "category": "INSPIRAÇÃO",
+            "source": "My Hero Academia"
+        },
+        {
+            "text": "O fracasso é apenas uma oportunidade para começar de novo.",
+            "author": "All Might",
+            "category": "CRESCIMENTO",
+            "source": "My Hero Academia"
+        }
+    ]
+}
