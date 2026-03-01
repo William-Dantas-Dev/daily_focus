@@ -3,13 +3,23 @@ import 'package:http/http.dart' as http;
 
 import '../models/quote_pack.dart';
 
+class QuoteRemoteResult {
+  final String rawJson;
+  final QuotePack pack;
+
+  const QuoteRemoteResult({
+    required this.rawJson,
+    required this.pack,
+  });
+}
+
 class QuoteRemoteService {
   QuoteRemoteService._();
 
   static const String quotesUrl =
       'https://raw.githubusercontent.com/William-Dantas-Dev/daily_focus_content/main/quotes/quotes_pt.json';
 
-  static Future<QuotePack> fetchPack({
+  static Future<QuoteRemoteResult> fetchPack({
     Duration timeout = const Duration(seconds: 8),
   }) async {
     final uri = Uri.parse(quotesUrl);
@@ -24,6 +34,7 @@ class QuoteRemoteService {
       throw FormatException('JSON remoto inválido: esperado objeto.');
     }
 
-    return QuotePack.fromJson(decoded);
+    final pack = QuotePack.fromJson(decoded);
+    return QuoteRemoteResult(rawJson: res.body, pack: pack);
   }
 }

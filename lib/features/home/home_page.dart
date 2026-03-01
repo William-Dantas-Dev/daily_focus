@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import './widgets/bottom_navigation.dart';
+import './widgets/quote_loading.dart';
 import './widgets/home_header.dart';
 import './widgets/quote_card.dart';
 import './widgets/home_actions.dart';
 
 import '../quotes/models/quote.dart';
-import '../quotes/repository/quote_repository.dart';
-import '../quotes/services/quote_picker.dart';
+import './controller/home_controller.dart';
+import './state/home_state.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,85 +17,34 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _currentIndex = 0;
-
   final String _subtitle = 'Seu foco de hoje';
 
-  final QuoteRepository _repo = QuoteRepository();
-
-  bool _isLoading = true;
-  List<Quote> _quotes = const [];
-  Quote? _currentQuote;
+  late final HomeController _controller;
 
   @override
   void initState() {
     super.initState();
-    _loadQuotes();
+    _controller = HomeController();
+    _controller.boot();
   }
 
-  Future<void> _loadQuotes() async {
-    try {
-      final pack = await _repo.getPack();
-      final loaded = pack.quotes;
-
-      if (!mounted) return;
-
-      setState(() {
-        _quotes = loaded;
-        _currentQuote = QuotePicker.random(_quotes);
-        _isLoading = false;
-      });
-    } catch (e) {
-      if (!mounted) return;
-
-      setState(() {
-        _isLoading = false;
-        _quotes = const [];
-        _currentQuote = const Quote(
-          text: 'Não foi possível carregar as frases agora.',
-          author: 'Daily Focus',
-          category: 'INFO',
-        );
-      });
-
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Falha ao carregar frases. Verifique sua conexão.'),
-        ),
-      );
-    }
-  }
-
-  void _newQuote() {
-    if (_isLoading) return;
-
-    final next = QuotePicker.random(_quotes, exclude: _currentQuote);
-    setState(() => _currentQuote = next);
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   String _formatDatePt(DateTime date) {
     const months = [
-      'Janeiro',
-      'Fevereiro',
-      'Março',
-      'Abril',
-      'Maio',
-      'Junho',
-      'Julho',
-      'Agosto',
-      'Setembro',
-      'Outubro',
-      'Novembro',
-      'Dezembro',
+      'Janeiro','Fevereiro','Março','Abril','Maio','Junho',
+      'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro',
     ];
-    final monthName = months[date.month - 1];
-    return '${date.day} de $monthName';
+    return '${date.day} de ${months[date.month - 1]}';
   }
 
   @override
   Widget build(BuildContext context) {
     final dateText = _formatDatePt(DateTime.now());
-    final quote = _currentQuote;
 
     return Scaffold(
       extendBody: true,
@@ -111,91 +60,53 @@ class _HomePageState extends State<HomePage> {
           bottom: false,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(18, 8, 18, 120),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                HomeHeader(dateText: dateText, subtitle: _subtitle),
-                const SizedBox(height: 28),
+            child: ValueListenableBuilder<HomeState>(
+              valueListenable: _controller.state,
+              builder: (context, s, _) {
+                final Quote? q = s.currentQuote;
 
-                Expanded(
-                  child: _isLoading
-                      ? const _QuoteLoading()
-                      : AnimatedSwitcher(
-                          duration: const Duration(milliseconds: 260),
-                          switchInCurve: Curves.easeOut,
-                          switchOutCurve: Curves.easeIn,
-                          transitionBuilder: (child, animation) {
-                            final fade = FadeTransition(
-                              opacity: animation,
-                              child: child,
-                            );
-
-                            final slide = SlideTransition(
-                              position: Tween<Offset>(
-                                begin: const Offset(0, 0.03),
-                                end: Offset.zero,
-                              ).animate(animation),
-                              child: fade,
-                            );
-
-                            return slide;
-                          },
-                          child: QuoteCard(
-                            key: ValueKey(
-                              '${quote?.text ?? ''}-${quote?.author ?? ''}-${quote?.source ?? ''}',
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    HomeHeader(dateText: dateText, subtitle: _subtitle),
+                    const SizedBox(height: 28),
+                    Expanded(
+                      child: (s.isLoading || q == null)
+                          ? const QuoteLoading()
+                          : AnimatedSwitcher(
+                              duration: const Duration(milliseconds: 260),
+                              switchInCurve: Curves.easeOut,
+                              switchOutCurve: Curves.easeIn,
+                              transitionBuilder: (child, animation) {
+                                return FadeTransition(
+                                  opacity: animation,
+                                  child: SlideTransition(
+                                    position: Tween<Offset>(
+                                      begin: const Offset(0, 0.03),
+                                      end: Offset.zero,
+                                    ).animate(animation),
+                                    child: child,
+                                  ),
+                                );
+                              },
+                              child: QuoteCard(
+                                key: ValueKey(q.id),
+                                category: q.category,
+                                quote: q.text,
+                                author: q.author,
+                                source: q.source,
+                              ),
                             ),
-                            category: quote?.category ?? 'INFO',
-                            quote: quote?.text ?? '',
-                            author: quote?.author ?? '',
-                            source: quote?.source,
-                          ),
-                        ),
-                ),
-
-                const SizedBox(height: 18),
-
-                HomeActions(
-                  onNewQuote: _newQuote,
-                  onLike: () {
-                    // próximo passo: favoritar (cache local)
-                  },
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-      bottomNavigationBar: BottomNavigation(
-        currentIndex: _currentIndex,
-        onTap: (i) => setState(() => _currentIndex = i),
-      ),
-    );
-  }
-}
-
-class _QuoteLoading extends StatelessWidget {
-  const _QuoteLoading();
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: const Color(0xFF0A0F2A).withOpacity(0.65),
-        borderRadius: BorderRadius.circular(28),
-        border: Border.all(
-          color: const Color(0xFF6C7BFF).withOpacity(0.10),
-          width: 1,
-        ),
-      ),
-      child: Center(
-        child: SizedBox(
-          width: 22,
-          height: 22,
-          child: CircularProgressIndicator(
-            strokeWidth: 2.4,
-            valueColor: AlwaysStoppedAnimation<Color>(
-              Colors.white.withOpacity(0.7),
+                    ),
+                    const SizedBox(height: 18),
+                    HomeActions(
+                      onNewQuote: _controller.newQuote,
+                      onLike: _controller.toggleFavorite,
+                      isFavorite: s.isFavorite,
+                    ),
+                  ],
+                );
+              },
             ),
           ),
         ),

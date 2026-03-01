@@ -16,9 +16,10 @@ class QuotePack {
 
     final quotesList = (rawQuotes is List)
         ? rawQuotes
-              .whereType<Map>()
-              .map((e) => Quote.fromJson(Map<String, dynamic>.from(e)))
-              .toList()
+            .whereType<Map>()
+            .map((e) => Quote.fromJson(Map<String, dynamic>.from(e)))
+            .where((q) => q.id >= 0 && q.text.trim().isNotEmpty)
+            .toList()
         : <Quote>[];
 
     return QuotePack(

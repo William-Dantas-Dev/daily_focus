@@ -11,7 +11,6 @@ class BottomNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Container pra dar a “barra” escura e padding igual ao print
     return Container(
       padding: const EdgeInsets.fromLTRB(10, 8, 10, 10),
       decoration: BoxDecoration(
@@ -41,8 +40,8 @@ class BottomNavigation extends StatelessWidget {
               label: 'INÍCIO',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.history_rounded),
-              label: 'HISTÓRICO',
+              icon: Icon(Icons.favorite),
+              label: 'Favoritos',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.explore_rounded),

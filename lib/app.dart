@@ -17,7 +17,7 @@ class DailyFocusApp extends StatelessWidget {
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
 
-      initialRoute: AppRoutes.home,
+      initialRoute: AppRoutes.shell,
       onGenerateRoute: AppRouter.onGenerateRoute,
     );
   }

@@ -5,10 +5,12 @@ class HomeActions extends StatelessWidget {
     super.key,
     required this.onNewQuote,
     required this.onLike,
+    required this.isFavorite,
   });
 
   final VoidCallback onNewQuote;
   final VoidCallback onLike;
+  final bool isFavorite;
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +66,7 @@ class HomeActions extends StatelessWidget {
                     ),
                   ),
                 ),
-                child: const Icon(Icons.favorite_rounded, size: 18),
+                child: Icon(isFavorite ? Icons.favorite : Icons.favorite_border, size: 18),
               ),
             ),
           ],
