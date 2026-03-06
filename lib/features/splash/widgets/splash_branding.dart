@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:daily_focus/l10n/app_localizations.dart';
 import 'focus_pulse_logo.dart';
 
 class SplashBranding extends StatelessWidget {
@@ -7,13 +8,14 @@ class SplashBranding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final loc = AppLocalizations.of(context)!;
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
         FocusPulseLogo(),
         SizedBox(height: 30),
         Text(
-          "Daily Focus",
+          loc.appName,
           style: TextStyle(
             fontSize: 32,
             fontWeight: FontWeight.bold,
@@ -23,7 +25,7 @@ class SplashBranding extends StatelessWidget {
         ),
         SizedBox(height: 8),
         Text(
-          "Focus on what truly matters.",
+          loc.splashTagline,
           style: TextStyle(fontSize: 15, color: Colors.white70),
         ),
       ],
