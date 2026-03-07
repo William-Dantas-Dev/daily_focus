@@ -12,6 +12,15 @@ class AppLocalizationsPt extends AppLocalizations {
   String get appName => 'Daily Focus';
 
   @override
+  String get commonSave => 'Salvar';
+
+  @override
+  String get commonCancel => 'Cancelar';
+
+  @override
+  String get commonContinue => 'Continuar';
+
+  @override
   String get splashTagline => 'Foque no que realmente importa.';
 
   @override
@@ -19,4 +28,24 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get splashPreparingWorkspace => 'Preparando seu ambiente...';
+
+  @override
+  String get splashAlmostReady => 'Quase pronto...';
+
+  @override
+  String get homeTitle => 'Início';
+
+  @override
+  String homeGreeting(Object name) {
+    return 'Olá, $name';
+  }
+
+  @override
+  String get tasksTitle => 'Tarefas';
+
+  @override
+  String get tasksEmptyTitle => 'Nenhuma tarefa encontrada';
+
+  @override
+  String get tasksEmptySubtitle => 'Crie uma tarefa para começar';
 }

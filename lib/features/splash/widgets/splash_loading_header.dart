@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
 
 class SplashLoadingHeader extends StatelessWidget {
-  const SplashLoadingHeader({
-    super.key,
-    required this.label,
-    required this.progress,
-  });
+  const SplashLoadingHeader({super.key, required this.label});
 
   final String label;
-  final double progress;
 
   @override
   Widget build(BuildContext context) {
-    final percent = (progress * 100).toInt();
-
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(label, style: const TextStyle(color: Colors.white70)),
-        Text('$percent%', style: const TextStyle(color: Colors.blue)),
-      ],
+    return Center(
+      child: Text(
+        label,
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 15,
+          fontWeight: FontWeight.w600,
+          letterSpacing: 0.2,
+        ),
+      ),
     );
   }
 }

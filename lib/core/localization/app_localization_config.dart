@@ -1,4 +1,4 @@
-import 'package:daily_focus/l10n/app_localizations.dart';
+import 'package:daily_focus/l10n/arb/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 

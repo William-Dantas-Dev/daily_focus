@@ -1,0 +1,26 @@
+{
+  "@@locale": "en",
+
+  "appName": "Daily Focus",
+
+  "commonSave": "Save",
+  "commonCancel": "Cancel",
+  "commonContinue": "Continue",
+
+  "splashTagline": "Focus on what truly matters.",
+  "splashStartingUp": "Starting up",
+  "splashPreparingWorkspace": "Preparing your workspace...",
+  "splashAlmostReady": "Almost ready...",
+
+  "homeTitle": "Home",
+  "homeGreeting": "Hello, {name}",
+  "@homeGreeting": {
+    "placeholders": {
+      "name": {}
+    }
+  },
+
+  "tasksTitle": "Tasks",
+  "tasksEmptyTitle": "No tasks found",
+  "tasksEmptySubtitle": "Create your first task to get started"
+}

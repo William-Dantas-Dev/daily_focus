@@ -1,11 +1,12 @@
+import 'package:daily_focus/features/shell/shell_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/splash/splash_page.dart';
 
 class AppRoutes {
-  static const home = '/';
-  static const onboarding = '/onboarding';
   static const splash = '/splash';
+  static const shell = '/shell';
+  static const home = '/home';
 }
 
 class AppRouter {
@@ -13,8 +14,8 @@ class AppRouter {
     switch (settings.name) {
       case AppRoutes.home:
         return MaterialPageRoute(builder: (_) => const HomePage());
-      case AppRoutes.onboarding:
-        return MaterialPageRoute(builder: (_) => const OnboardingPage());
+      case AppRoutes.shell:
+        return MaterialPageRoute(builder: (_) => const ShellPage());
       case AppRoutes.splash:
         return MaterialPageRoute(builder: (_) => const SplashPage());
       default:
@@ -28,13 +29,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) =>
       const Scaffold(body: Center(child: Text('Home')));
-}
-
-class OnboardingPage extends StatelessWidget {
-  const OnboardingPage({super.key});
-  @override
-  Widget build(BuildContext context) =>
-      const Scaffold(body: Center(child: Text('Onboarding')));
 }
 
 class UnknownRoutePage extends StatelessWidget {

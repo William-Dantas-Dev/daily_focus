@@ -18,7 +18,7 @@ import 'app_localizations_pt.dart';
 /// `supportedLocales` list. For example:
 ///
 /// ```dart
-/// import 'l10n/app_localizations.dart';
+/// import 'arb/app_localizations.dart';
 ///
 /// return MaterialApp(
 ///   localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -104,6 +104,24 @@ abstract class AppLocalizations {
   /// **'Daily Focus'**
   String get appName;
 
+  /// No description provided for @commonSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get commonSave;
+
+  /// No description provided for @commonCancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get commonCancel;
+
+  /// No description provided for @commonContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get commonContinue;
+
   /// No description provided for @splashTagline.
   ///
   /// In en, this message translates to:
@@ -121,6 +139,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Preparing your workspace...'**
   String get splashPreparingWorkspace;
+
+  /// No description provided for @splashAlmostReady.
+  ///
+  /// In en, this message translates to:
+  /// **'Almost ready...'**
+  String get splashAlmostReady;
+
+  /// No description provided for @homeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get homeTitle;
+
+  /// No description provided for @homeGreeting.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello, {name}'**
+  String homeGreeting(Object name);
+
+  /// No description provided for @tasksTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tasks'**
+  String get tasksTitle;
+
+  /// No description provided for @tasksEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No tasks found'**
+  String get tasksEmptyTitle;
+
+  /// No description provided for @tasksEmptySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Create your first task to get started'**
+  String get tasksEmptySubtitle;
 }
 
 class _AppLocalizationsDelegate
